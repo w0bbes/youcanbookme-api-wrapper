@@ -15,6 +15,11 @@ Init:
 const apiWrapper = new YouCanBookMeApi()
 ```
 
+Note: I personally supply an isomorphic-fetch instance to the wrapper by using:
+```javascript
+apiWrapper.fetch = fetch
+```
+
 Set your credentials:
 ```javascript
 apiWrapper.setCredentials(email, password)
@@ -37,3 +42,4 @@ Todo:
 - Support more profiles.
 - Show availability (there is not api for this right now, support says it's not publicly available because of security reasons). We could, however, scrape the html.
 - Get the fields we need to submit a booking to reflect the ones from the dashboard. Right now we only support first name, last name and email
+
